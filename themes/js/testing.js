@@ -6,7 +6,7 @@ function onDeviceReady(){
 	$("#resultado").html("PhoneGap esta en marcha");
 	
 	navigator.accelerometer.getCurrentAcceleration(onInfo, onError);
-	var watch = navigator.accelerometer.watchAcceleration(onInfo,OnError,{frecuenci:1000});
+	var watch = navigator.accelerometer.watchAcceleration(onInfo,OnError,{frecuency:1000});
 }
 
 function onInfo(acceleration) {
