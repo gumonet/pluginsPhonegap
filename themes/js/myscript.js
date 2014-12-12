@@ -14,14 +14,27 @@ $(document).bind("mobileinit",function() {
 		$("#alerta").click(function(){
 			navigator.notification.alert("Esto es una Alerta", alertCallback, "Alerta!", "cierrame");
 		});
+		
 		$("#confirmacion").click(function(){
-			navigator.notification.confirm("Esto es una Confirmación", confirmCallback, "Confirmación!", ["Si","No"]);
+			navigator.notification.confirm(
+				'You are the winner!', // message
+				 onConfirm,            // callback to invoke with index of button pressed
+				'Game Over',           // title
+				['Restart','Exit']     // buttonLabels
+			);
 		});
+		
 		$("#promt").click(function(){
-			navigator.notification.prompt("Esto es un Promt", promptCallback, "Promt!", ["Si","Cancelar"], "Tu diras...");
+			navigator.notification.prompt(
+				'Please enter your name',  // message
+				onPrompt,                  // callback to invoke
+				'Registration',            // title
+				['Ok','Exit'],             // buttonLabels
+				'Jane Doe'                 // defaultText
+			);
 		});
 		$("#ruido").click(function(){
-			navigator.notification.beeb(1);
+			navigator.notification.beep(2);
 			navigator.notification.vibrate(1000);
 		});
 	});
@@ -47,9 +60,10 @@ function onError() {
 function alertCallback(){
 	$("#resultado2").append("La ventana se ha cerrado<br>");
 }
-function confirmCallback(butonIndex){
-	$("#resultado2").append("Ha habido una confirmación y se a pulsado el boton"+ butonIndex +" <br>");
+function onConfirm(buttonIndex) {
+    $("#resultado2").append("Ha habido una confirmación y se a pulsado el boton"+ buttonIndex +" <br>");
 }
-function promptCallback(buttonIndex, input){
-	$("#resultado2").append("Ha habido un promt y Se ha pulsado el boton: "+buttonIndex+" y se ha escrito el texto : "+input+"<br>");
+function onPrompt(results) {
+    $("#resultado2").append("You selected button number " + results.buttonIndex + " and entered " + results.input1+"<br>");
 }
+
