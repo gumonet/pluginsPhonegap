@@ -6,13 +6,14 @@ function onDeviceReady(){
 	$("#resultado").html("PhoneGap esta en marcha");
 	
 	navigator.accelerometer.getCurrentAcceleration(onInfo, onError);
+	var watch = navigator.accelerometer.watchAcceleration(onInfo,OnError,{frecuenci:1000});
 }
 
 function onInfo(acceleration) {
-    $("#resultado").append('Acceleration X: ' + acceleration.x + '\n' +
-          'Acceleration Y: ' + acceleration.y + '\n' +
-          'Acceleration Z: ' + acceleration.z + '\n' +
-          'Timestamp: '      + acceleration.timestamp + '\n');
+    $("#resultado").html('Acceleration X: ' + acceleration.x + '<br>' +
+          'Acceleration Y: ' + acceleration.y + '<br>' +
+          'Acceleration Z: ' + acceleration.z + '<br>' +
+          'Timestamp: '      + acceleration.timestamp + '<br>');
 };
 
 function onError() {
