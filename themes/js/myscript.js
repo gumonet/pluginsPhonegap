@@ -2,6 +2,7 @@
 $(document).bind("mobileinit",function() {
 
 	$( document ).on( "pageshow", "#acelerometro", function( event ) {
+		alert('asda');
 		$("#resultado").html("PhoneGap esta en marcha");	
 		//navigator.accelerometer.getCurrentAcceleration(onInfo, onError);
 		//var watch = navigator.accelerometer.watchAcceleration(onInfo,OnError,{frequency: 3000 });
