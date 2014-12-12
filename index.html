@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <title>Hello PhoneGap</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-        <meta charset="utf-8">
-
-
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-        <script type="text/javascript">
-
-        function onBodyLoad()
-        {       
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
-
-        function onDeviceReady()
-        {
-            // do your thing!
-            navigator.notification.alert("PhoneGap is working")
-        }
-
-        </script>
-    </head>
-    <body onload="onBodyLoad()">
-    <h1>Hey, it's PhoneGap!</h1>
-    </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Plugins Phonegap</title>
+	<link rel="stylesheet" href="themes/my-theme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="themes/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    
+    <script src="themes/js/myscript.js"></script>
+	<script src="themes/js/jquery.mobile-1.4.5.min.js"></script>   
+    
+    <script src="themes/js/testing.js"></script> 
+    <link rel="stylesheet" href="themes/custom.css" />
+</head>
+<body onLoad="onBodyLoad()">
+	<div data-role="page" data-theme="a" id="index">
+		<div data-role="header">
+            <h1>PLUGINS PHONEGAP</h1>
+        </div>
+         <div data-role="main" class="ui-content" > 
+            <div data-role="listview">
+            	<li><a href="#acelerometro">Acelerometro</a>
+            </div>
+            <div data-role="content" id="resultado">
+            	Test 1.0
+            </div>
+            
+        </div> 
+        <div data-role="footer" data-position="fixed" id="footerPral">
+        	<div data-role="navbar">
+            	<ul>
+                	<li><a href="#" data-icon="back">Botón</a> </li>
+                    <li><a href="#" data-icon="home">Botón</a> </li>
+                    <li><a href="#" data-icon="gear">Botón</a> </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+    <!-- End Page -->
+    
+    
+</body>
 </html>
 
