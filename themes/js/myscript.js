@@ -9,7 +9,7 @@ $(document).bind("mobileinit",function() {
 		//navigator.accelerometer.clearWatch(watchID);
 	});
 	
-	$( document ).on( "pageshow", "#acelerometro", function( event ) {
+	$( document ).on( "pageshow", "#notification", function( event ) {
 		//navigator.notification.alert(message, alertCallback, [title], [buttonName])
 		$("#alerta").click(function(){
 			navigator.notification.alert("Esto es una Alerta", alertCallback, "Alerta!", "cierrame");
