@@ -12,8 +12,11 @@ Muestra una demostración de los plugins utilizados en phonegap
 Angel Gutierrez Monola
 		</author>
 		<preference name="phonegap-version" value="3.6.3" />
+		<gap:plugin name="org.apache.cordova.device" />
+		<gap:plugin name="org.apache.cordova.device-motion" />
+		
 		<preference name="orientation" value="default" />
-		<preference name="fullscreen" value="false" />
+		<preference name="fullscreen" value="true" />
 		<preference name="target-device" value="universal" />
 		<preference name="webviewbounce" value="true" />
 		<preference name="prerendered-icon" value="true" />
