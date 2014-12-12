@@ -14,6 +14,7 @@ Angel Gutierrez Monola
 		<preference name="phonegap-version" value="3.6.3" />
 		<gap:plugin name="org.apache.cordova.device" />
 		<gap:plugin name="org.apache.cordova.device-motion" />
+		<gap:plugin name="org.apache.cordova.dialogs" />
 		
 		<preference name="orientation" value="default" />
 		<preference name="fullscreen" value="true" />
